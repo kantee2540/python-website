@@ -35,7 +35,7 @@ print("<html>")
 print("<body>")
 print("<p>Congrat! <b>{} {}</b> You registered</p>".format(name, lastname))
 print("<p>Go back to previous page</p>")
-print("<p><a href=\"register.html\">Return</a></p>")
+print("<p><a href=\"login.html\">Return</a></p>")
 print("</body>")
 print("</html>")
 
