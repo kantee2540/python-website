@@ -1,8 +1,12 @@
+#!C:\xampp\htdocs\python-website\venv\Scripts\python.exe
 #!C:\wamp64\www\website\venv\Scripts\python.exe
+
+
 import cgi
 import datetime
 import hashlib
 import sqlite3
+
 
 def register_process(username, password, firstname, lastname):
     try:
