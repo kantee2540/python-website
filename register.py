@@ -1,6 +1,5 @@
-#!C:\wamp64\www\website\venv\Scripts\python.exe
 #!C:\xampp\htdocs\python-website\venv\Scripts\python.exe
-
+#!C:\wamp64\www\website\venv\Scripts\python.exe
 
 import cgi
 import datetime

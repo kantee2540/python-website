@@ -1,6 +1,8 @@
+#!C:\xampp\htdocs\python-website\venv\Scripts\python.exe
 #!C:\wamp64\www\website\venv\Scripts\python.exe
 
 from databaselibrary import connect_db
+
 
 def get_option_supplier():
     connect = connect_db()
@@ -21,26 +23,27 @@ def get_option_category():
         print("<option value=\"{}\">{}</option>".format(row["CategoryID"],
                                                         row["CategoryName"]))
 
+
 if __name__ == '__main__':
     print("Content-Type:text/html")
     print()
     print("<html>")
     print("<body>")
     print("<h1>Insert Product</h1>")
-    print("<form>")
+    print("<form action=\"insertproducttodatabase.py\" method=\"get\">")
     print("<table>")
 
     # Product name
     print("<tr>")
     print("<td>ProductName</td>")
-    print("<td><input type=\"text\"></td>")
+    print("<td><input name=\"productname\" type=\"text\" required></td>")
     print("</tr>")
 
     # Supplier
     print("<tr>")
     print("<td>Supplier Name</td>")
     print("<td>")
-    print("<select name=\"suppliers\">")
+    print("<select name=\"suppliersid\">")
     get_option_supplier()
     print("</select>")
     print("<td>")
@@ -50,7 +53,7 @@ if __name__ == '__main__':
     print("<tr>")
     print("<td>Category</td>")
     print("<td>")
-    print("<select>")
+    print("<select name=\"categoryid\">")
     get_option_category()
     print("</select>")
     print("</td>")
@@ -63,22 +66,22 @@ if __name__ == '__main__':
 
     print("<tr>")
     print("<td>UnitPrice</td>")
-    print("<td><input name=\"unitprice\" type=\"number\"></td>")
+    print("<td><input name=\"unitprice\" type=\"number\" required></td>")
     print("</tr>")
 
     print("<tr>")
     print("<td>UnitsInStock</td>")
-    print("<td><input name=\"unitstock\" type=\"number\"></td>")
+    print("<td><input name=\"unitstock\" type=\"number\" required></td>")
     print("</tr>")
 
     print("<tr>")
     print("<td>UnitsOnOrder</td>")
-    print("<td><input name=\"unitorder\" type=\"number\"></td>")
+    print("<td><input name=\"unitorder\" type=\"number\" required></td>")
     print("</tr>")
 
     print("<tr>")
     print("<td>ReorderLevel</td>")
-    print("<td><input name=\"reorderlevel\ type=\"number\"></td>")
+    print("<td><input name=\"reorderlevel\" type=\"number\" required></td>")
     print("</tr>")
 
     print("<tr>")

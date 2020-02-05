@@ -1,3 +1,4 @@
+#!C:\xampp\htdocs\python-website\venv\Scripts\python.exe
 #!C:\wamp64\www\website\venv\Scripts\python.exe
 
 from databaselibrary import connect_db
